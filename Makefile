@@ -1,7 +1,5 @@
-// vessel-service/Makefile
-proto:
-	protoc -I. --go_out=plugins=micro:. \
-      proto/vessel/vessel.proto
+pb:
+	protoc -I. --go_out=plugins=micro:. proto/vessel/vessel.proto
 
 build:
 	docker build -t vessel-service .
